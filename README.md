@@ -4,7 +4,9 @@ Project Toko Online "Masbro"
 ## Quickstart
 Install [Node JS](https://nodejs.org/en).
 
-Command-command berikut digunakan di directory paling atas dalam proyek
+Command-command berikut digunakan di directory paling atas dalam proyek.
+
+
 Buat ngebuild proyek, pake terminal:
 ```
 npm init
