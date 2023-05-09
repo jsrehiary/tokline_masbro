@@ -13,7 +13,11 @@ npm i --save nodemon
 ```
 
 Jalanin proyek nya:
-```npm start```
+```
+npm start
+```
 
 Atau kalau pas di save, bisa auto refresh proses nya:
-```nodemon server.js```
+```
+nodemon server.js
+```
