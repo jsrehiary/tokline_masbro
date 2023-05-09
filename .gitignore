@@ -1,3 +1,2 @@
-/node_modules
-package-lock.json
-package.json
+# hide node_modules and it's childs
+node_modules/
