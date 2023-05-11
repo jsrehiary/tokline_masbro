@@ -28,6 +28,7 @@ app.get("/", (req, res) => {
     })
 })
 
+// CREATE
 app.post("/add", (req, res) => {
     const q = "INSERT INTO `user` (`Username`, `Password` ,`Email`, `Phone`) VALUES (?, ?, ?, ?);"
     
@@ -42,6 +43,7 @@ app.post("/add", (req, res) => {
     })
 })
 
+// DELETE
 app.get("/remove/(:PersonID)", (req, res) => {
     const q = `DELETE FROM \`user\` WHERE \`PersonID\` = ${req.params.PersonID}`;
     db.query(q, (err, reuslt) => {
@@ -51,7 +53,22 @@ app.get("/remove/(:PersonID)", (req, res) => {
     
 })
 
-// Search Function
+// UPDATE
+app.get("/update/(:PersonID)", (req, res) => {
+    const q = `UPDATE  \`user\` SET 
+    Username = "${req.body.Username}",
+    Password = "${req.body.Password}",
+    Email = "${req.body.Email}",
+    Phone = "${req.body.Phone}"
+    WHERE PersonID = "${req.params.PersonID}"`
+
+    db.query(q, (err, result) => {
+        console.log(result)
+        res.redirect("/")
+    })
+})
+
+// SEARCH
 app.get("/search", (req, res) => {
     const q = `SELECT * FROM \`user\` WHERE \`Username\` 
                 LIKE '%${req.query.q}%' 
@@ -60,7 +77,7 @@ app.get("/search", (req, res) => {
                 OR \`Phone\` LIKE '%${req.query.q}%';`
     db.query(q, (err, result) => {
         const users = JSON.parse(JSON.stringify(result))
-        res.render("index", {users: users, title: `Search result ${req.query.q}`})
+        res.render("index", {users: users, title: `Search result of "${req.query.q}"`})
     })
 })
 

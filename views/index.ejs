@@ -12,7 +12,7 @@
 <body class="bg-primary text-dark bg-opacity-10">
     <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
-            <a class="navbar-brand" href="/">RYRK Shop</a>
+            <a class="navbar-brand" href="/"><span>RYRK</span> Shop</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -50,7 +50,7 @@
     </nav>
         <div class="row">
             <div class="col">
-                <h1 class="p-3 bg-dark bg-opacity-10 border border-dark border-start-0 rounded-end">Test DB - PHP</h1>
+                <h1 class="p-3 bg-dark bg-opacity-10 border border-dark border-start-0 rounded-end">DB Test, Express JS</h1>
             </div>
         </div>
         <div class="row">
@@ -61,25 +61,28 @@
                             <tr>
                                 <th scope="col">Person ID</th>
                                 <th scope="col">Username</th>
-                                <th scope="col">Passowrd</th>
+                                <th scope="col">Password</th>
                                 <th scope="col">Email</th>
                                 <th scope="col">Phone</th>
-                                <th scope="col">Edit</th>
+                                <th scope="col" colspan="2">Edit</th>
                             </tr>
                         </thead>
                         <tbody>
                             <% for (let user of users) { %>
                             <tr>
-                                <th scope="row"><%= user.PersonID %></th>
-                                <td><%= user.Username %></td>
-                                <td>
-                                    <code>
-                                        <%= user.Password %>
-                                    </code>
-                                </td>
-                                <td><%= user.Email %></td>
-                                <td><%= user.Phone %></td>
-                                <td><a href="/remove/<%=user.PersonID%>">Delete</a></td>
+                                    <th scope="row"><%= user.PersonID %></th>
+                                    <td><%= user.Username %></td>
+                                    <td>
+                                        <code><%= user.Password %></code>
+                                    </td>
+                                    <td><%= user.Email %></td>
+                                    <td><%= user.Phone %></td>
+                                    <td><button onclick="alert('Sedang dalam tahap pengembangan !')" class="btn btn-outline-dark">Update</button></td>
+                                    <td>
+                                        <a href="/remove/<%=user.PersonID%>">
+                                            <button class="btn btn-outline-dark">Delete</button>
+                                        </a>
+                                    </td>
                             </tr>
                             <% } %>
                         </tbody>
@@ -90,8 +93,8 @@
         <div class="row">
             <div class="col">
                 <div class="container-sm bg-dark bg-opacity-10">
-                    <form action="/add" method="POST">
-                        <legend>This should probably the login screen</legend>
+                    <form action="/add" method="POST" class="p-5">
+                        <legend>Form Login Kayaknya</legend>
                         <div class="mb-3">
                             <label for="InputUsername1" class="form-label">Username</label>
                             <input type="text" class="form-control" id="InputUsername1" name="Username" required>
@@ -104,7 +107,7 @@
                             <label for="InputEmail1" class="form-label">Email address</label>
                             <input type="email" class="form-control" id="InputEmail1" aria-describedby="emailHelp"
                                 name="Email" required>
-                            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.
+                            <div id="emailHelp" class="form-text">Kita tidak akan membagikan email anda ke pihak lain.
                             </div>
                         </div>
                         <div class="mb-3">
