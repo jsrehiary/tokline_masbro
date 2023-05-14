@@ -25,4 +25,4 @@ nodemon server.js
 ```
 
 Screenshots
-[/screenshots/website alpha.png]
+![Website Alpha](screenshots/website alpha.png)
