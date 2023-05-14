@@ -1,5 +1,5 @@
 # tokline_masbro
-Project Toko Online "Masbro"
+Project Toko Online "Masbro" dengan menggunakan MySQL, Bootstrap dan Express JS
 
 ## Quickstart
 Install [Node JS](https://nodejs.org/en).
