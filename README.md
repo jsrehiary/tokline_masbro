@@ -24,5 +24,6 @@ Atau kalau pas di save, bisa auto refresh proses nya:
 nodemon server.js
 ```
 
-Screenshots
-![Website Alpha](screenshots/website alpha.png)
+Tampilan Website (Sementara)
+
+![Website Alpha](/screenshots/website-alpha.png)
