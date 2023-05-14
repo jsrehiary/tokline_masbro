@@ -20,7 +20,7 @@ npm start
 
 Atau kalau pas di save, bisa auto refresh proses nya:
 ```
-nodemon server.js
+npm start
 ```
 
 Tampilan Website (Sementara)
